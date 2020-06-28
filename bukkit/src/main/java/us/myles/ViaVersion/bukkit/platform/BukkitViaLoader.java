@@ -15,7 +15,7 @@ import us.myles.ViaVersion.api.protocol.ProtocolVersion;
 import us.myles.ViaVersion.bukkit.classgenerator.ClassGenerator;
 import us.myles.ViaVersion.bukkit.listeners.UpdateListener;
 import us.myles.ViaVersion.bukkit.listeners.multiversion.PlayerSneakListener;
-import us.myles.ViaVersion.bukkit.listeners.protocol1_15to1_14_4.EntityToggleGlideListener;
+//import us.myles.ViaVersion.bukkit.listeners.protocol1_15to1_14_4.EntityToggleGlideListener;
 import us.myles.ViaVersion.bukkit.listeners.protocol1_9to1_8.ArmorListener;
 import us.myles.ViaVersion.bukkit.listeners.protocol1_9to1_8.BlockListener;
 import us.myles.ViaVersion.bukkit.listeners.protocol1_9to1_8.DeathListener;
@@ -95,13 +95,14 @@ public class BukkitViaLoader implements ViaPlatformLoader {
             }
         }
 
-        if (ProtocolRegistry.SERVER_PROTOCOL < ProtocolVersion.v1_15.getId()) {
-            try {
-                Class.forName("org.bukkit.event.entity.EntityToggleGlideEvent");
-                storeListener(new EntityToggleGlideListener(plugin)).register();
-            } catch (ClassNotFoundException ignored) {
-            }
-        }
+        // Imanity Fork - Never
+//        if (ProtocolRegistry.SERVER_PROTOCOL < ProtocolVersion.v1_15.getId()) {
+//            try {
+//                Class.forName("org.bukkit.event.entity.EntityToggleGlideEvent");
+//                storeListener(new EntityToggleGlideListener(plugin)).register();
+//            } catch (ClassNotFoundException ignored) {
+//            }
+//        }
 
         if ((Bukkit.getVersion().toLowerCase(Locale.ROOT).contains("paper")
                 || Bukkit.getVersion().toLowerCase(Locale.ROOT).contains("taco")

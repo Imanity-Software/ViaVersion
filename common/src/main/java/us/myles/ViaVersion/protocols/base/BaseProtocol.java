@@ -38,6 +38,7 @@ public class BaseProtocol extends SimpleProtocol {
                         int protVer = wrapper.get(Type.VAR_INT, 0);
                         int state = wrapper.get(Type.VAR_INT, 1);
 
+                        wrapper.user().getChannel().attr(Via.getPlatform().getVersionAttributeKey()).set(protVer);
                         ProtocolInfo info = wrapper.user().getProtocolInfo();
                         info.setProtocolVersion(protVer);
                         // Ensure the server has a version provider

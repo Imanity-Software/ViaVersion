@@ -39,25 +39,10 @@
 
         <!-- Bukkit API, http://www.spigotmc.org/ or http://bukkit.org/ -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>${bukkitVersion}</version>
+            <groupId>spg.lgdev</groupId>
+            <artifactId>spigot-server</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-            <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <artifactId>junit</artifactId>
-                    <groupId>junit</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>gson</artifactId>
-                    <groupId>com.google.code.gson</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>persistence-api</artifactId>
-                    <groupId>javax.persistence</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 </project>

@@ -1,6 +1,7 @@
 package us.myles.ViaVersion;
 
 import com.google.gson.JsonObject;
+import io.netty.util.AttributeKey;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Listener;
@@ -195,5 +196,15 @@ public class BungeePlugin extends Plugin implements ViaPlatform<ProxiedPlayer>, 
     @Override
     public ViaConnectionManager getConnectionManager() {
         return connectionManager;
+    }
+
+    @Override
+    public boolean is1_9Supported() {
+        return true;
+    }
+
+    @Override
+    public AttributeKey<Integer> getVersionAttributeKey() {
+        return null;
     }
 }

@@ -2,6 +2,7 @@ package us.myles.ViaVersion;
 
 import com.google.gson.JsonObject;
 import com.google.inject.Inject;
+import io.netty.util.AttributeKey;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 import org.spongepowered.api.Game;
@@ -246,5 +247,15 @@ public class SpongePlugin implements ViaPlatform<Player> {
     @Override
     public Logger getLogger() {
         return logger;
+    }
+
+    @Override
+    public boolean is1_9Supported() {
+        return true;
+    }
+
+    @Override
+    public AttributeKey<Integer> getVersionAttributeKey() {
+        return null;
     }
 }

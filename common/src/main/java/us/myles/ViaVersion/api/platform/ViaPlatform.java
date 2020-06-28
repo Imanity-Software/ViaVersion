@@ -1,6 +1,7 @@
 package us.myles.ViaVersion.api.platform;
 
 import com.google.gson.JsonObject;
+import io.netty.util.AttributeKey;
 import us.myles.ViaVersion.api.ViaAPI;
 import us.myles.ViaVersion.api.ViaVersionConfig;
 import us.myles.ViaVersion.api.command.ViaCommandSender;
@@ -168,4 +169,8 @@ public interface ViaPlatform<T> {
     boolean isOldClientsAllowed();
 
     ViaConnectionManager getConnectionManager();
+
+    AttributeKey<Integer> getVersionAttributeKey();
+
+    boolean is1_9Supported();
 }

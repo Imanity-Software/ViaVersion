@@ -10,6 +10,7 @@ import com.velocitypowered.api.plugin.PluginContainer;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.Player;
 import com.velocitypowered.api.proxy.ProxyServer;
+import io.netty.util.AttributeKey;
 import net.kyori.text.serializer.gson.GsonComponentSerializer;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
@@ -231,5 +232,15 @@ public class VelocityPlugin implements ViaPlatform<Player> {
     @Override
     public ViaConnectionManager getConnectionManager() {
         return connectionManager;
+    }
+
+    @Override
+    public boolean is1_9Supported() {
+        return true;
+    }
+
+    @Override
+    public AttributeKey<Integer> getVersionAttributeKey() {
+        return null;
     }
 }
